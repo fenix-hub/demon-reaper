@@ -1,0 +1,460 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/Main_Scene.gd" type="Script" id=1]
+[ext_resource path="res://imgs/texts/HamletOrNot.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://imgs/head_bg_less.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_color = Color( 1, 1, 1, 0.0705882 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+outline_color = Color( 1, 1, 1, 0.0705882 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+outline_color = Color( 1, 1, 1, 0.0705882 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+outline_color = Color( 1, 1, 1, 0.0705882 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=6]
+loop = true
+
+[sub_resource type="Animation" id=7]
+loop = true
+
+[sub_resource type="Animation" id=8]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/exit:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 6, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/exit:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ), Color( 1, 1, 1, 0.207843 ), Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "exit_idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/exit:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/exit:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/new_game:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 6, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/new_game:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ), Color( 1, 1, 1, 0.207843 ), Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/new_game:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/new_game:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/settings:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 6, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/settings:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ), Color( 1, 1, 1, 0.207843 ), Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "settings_idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons/settings:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("buttons/settings:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 9.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 7, 8 ),
+"transitions": PoolRealArray( 0.267943, 1 ),
+"update": 0,
+"values": [ Vector2( 523, 25 ), Vector2( 523, 50 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 6.5, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("buttons:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 6.5, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("buttons:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 8, 9.1 ),
+"transitions": PoolRealArray( 0.287175, 1 ),
+"update": 0,
+"values": [ Vector2( 842.5, 330 ), Vector2( 842.5, 360 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("presentation1:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.4, 1.9, 3.6, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("presentation2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 4.1, 4.5, 6.1, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("presentation2:custom_fonts/font:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.4, 4.1, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 150, 50, 150 ]
+}
+
+[node name="Main_Scene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="presentation1" type="Label" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -416.5
+margin_right = 26.0
+margin_bottom = 416.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.996078, 0.419608, 0.301961, 1 )
+text = "Godot
+Wild
+Jam
+7"
+align = 2
+
+[node name="TextureRect2" type="TextureRect" parent="presentation1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 260.0
+margin_top = -103.5
+margin_right = 504.0
+margin_bottom = 98.5
+texture = ExtResource( 3 )
+expand = true
+
+[node name="presentation2" type="Label" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.0
+margin_top = -130.0
+margin_right = 322.0
+margin_bottom = -61.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "A game by:"
+align = 1
+
+[node name="presentation3" type="Label" parent="presentation2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = 37.5
+margin_right = 341.0
+margin_bottom = 106.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "fenicenera"
+align = 1
+
+[node name="buttons" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -117.5
+margin_top = -210.0
+margin_right = 117.5
+margin_bottom = 245.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="new_game" type="Button" parent="buttons"]
+margin_right = 235.0
+margin_bottom = 75.0
+focus_mode = 0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0.180392, 0.180392, 0.180392, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.666667 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.2, 0.34902, 1 )
+text = "Play"
+flat = true
+
+[node name="settings" type="Button" parent="buttons"]
+margin_top = 95.0
+margin_right = 235.0
+margin_bottom = 170.0
+focus_mode = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.180392, 0.180392, 0.180392, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.666667 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.2, 0.34902, 1 )
+text = "Settings"
+flat = true
+
+[node name="controls" type="Button" parent="buttons"]
+margin_top = 190.0
+margin_right = 235.0
+margin_bottom = 265.0
+focus_mode = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.180392, 0.180392, 0.180392, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.666667 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.2, 0.34902, 1 )
+text = "Controls"
+flat = true
+
+[node name="credits" type="Button" parent="buttons"]
+margin_top = 285.0
+margin_right = 235.0
+margin_bottom = 360.0
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0.180392, 0.180392, 0.180392, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.666667 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.2, 0.34902, 1 )
+text = "Credits"
+flat = true
+
+[node name="exit" type="Button" parent="buttons"]
+margin_top = 380.0
+margin_right = 235.0
+margin_bottom = 455.0
+focus_mode = 0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_disabled = Color( 0.180392, 0.180392, 0.180392, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.666667 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.2, 0.34902, 1 )
+text = "Exit"
+flat = true
+
+[node name="Title" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -437.0
+margin_top = 33.128
+margin_right = 437.0
+margin_bottom = 239.128
+custom_fonts/font = SubResource( 1 )
+text = "Demon Reaper"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/continue = SubResource( 6 )
+anims/continue_idle = SubResource( 7 )
+anims/exit = SubResource( 8 )
+anims/exit_idle = SubResource( 9 )
+anims/new_game = SubResource( 10 )
+anims/new_game_idle = SubResource( 11 )
+anims/settings = SubResource( 12 )
+anims/settings_idle = SubResource( 13 )
+anims/titlescreen = SubResource( 14 )
+[connection signal="pressed" from="buttons/new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="buttons/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="buttons/controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="buttons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="buttons/exit" to="." method="_on_exit_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

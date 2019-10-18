@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/life.gd" type="Script" id=1]
+[ext_resource path="res://imgs/player/life.png" type="Texture" id=2]
+
+[node name="life" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 13, 9 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( 25, 0 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="Sprite3" type="Sprite" parent="Sprite"]
+position = Vector2( 49.9757, 0 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="Sprite4" type="Sprite" parent="Sprite"]
+position = Vector2( 74.9515, 0 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="Sprite5" type="Sprite" parent="Sprite"]
+position = Vector2( 100.125, 0 )
+texture = ExtResource( 2 )
+hframes = 2
+

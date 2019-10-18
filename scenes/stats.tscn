@@ -1,0 +1,267 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/stats.gd" type="Script" id=1]
+[ext_resource path="res://imgs/texts/HamletOrNot.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="Animation" id=4]
+resource_name = "disable"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 0.31864 ),
+"update": 0,
+"values": [ Vector2( 521, 250 ), Vector2( 521, 190 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 0.31864, 1 ),
+"update": 0,
+"values": [ Vector2( 521, 190 ), Vector2( 521, 250 ) ]
+}
+
+[node name="stats" type="Control"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="MarginContainer" parent="."]
+modulate = Color( 1, 1, 1, 0.5 )
+margin_left = 521.0
+margin_top = 220.0
+margin_right = 1400.0
+margin_bottom = 710.0
+mouse_filter = 2
+theme = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+margin_right = 879.0
+margin_bottom = 490.0
+color = Color( 0, 0, 0, 0.784314 )
+
+[node name="vars" type="HBoxContainer" parent="ColorRect"]
+margin_right = 879.0
+margin_bottom = 490.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+alignment = 1
+
+[node name="labels" type="VBoxContainer" parent="ColorRect/vars"]
+margin_left = 153.0
+margin_top = 172.0
+margin_right = 403.0
+margin_bottom = 318.0
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/vars/labels"]
+margin_right = 250.0
+margin_bottom = 42.0
+hint_tooltip = "The number of humanity fragments you earned after you succeded in possessing a human soul"
+custom_fonts/font = SubResource( 2 )
+text = "Humanity fragments:"
+valign = 1
+
+[node name="Label3" type="Label" parent="ColorRect/vars/labels"]
+margin_top = 52.0
+margin_right = 250.0
+margin_bottom = 94.0
+hint_tooltip = "The total number of guardians you possessed after possessing a human soul"
+custom_fonts/font = SubResource( 2 )
+text = "Humans possessed:"
+valign = 1
+
+[node name="Label2" type="Label" parent="ColorRect/vars/labels"]
+margin_top = 104.0
+margin_right = 250.0
+margin_bottom = 146.0
+hint_tooltip = "The total number of guardians you possessed after possessing a human soul"
+custom_fonts/font = SubResource( 2 )
+text = "Guardians controlled:"
+valign = 1
+
+[node name="values" type="VBoxContainer" parent="ColorRect/vars"]
+margin_left = 407.0
+margin_top = 172.0
+margin_right = 419.0
+margin_bottom = 318.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="souls" type="Label" parent="ColorRect/vars/values"]
+margin_right = 12.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+valign = 1
+
+[node name="humans_possessed" type="Label" parent="ColorRect/vars/values"]
+margin_top = 52.0
+margin_right = 12.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+valign = 1
+
+[node name="guardians" type="Label" parent="ColorRect/vars/values"]
+margin_top = 104.0
+margin_right = 12.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/vars"]
+margin_left = 423.0
+margin_right = 523.0
+margin_bottom = 490.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 100, 0 )
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 50
+
+[node name="labels2" type="VBoxContainer" parent="ColorRect/vars"]
+editor/display_folded = true
+margin_left = 527.0
+margin_top = 146.0
+margin_right = 626.0
+margin_bottom = 344.0
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/vars/labels2"]
+margin_right = 99.0
+margin_bottom = 42.0
+hint_tooltip = "Your life points"
+custom_fonts/font = SubResource( 2 )
+text = "Life"
+align = 1
+
+[node name="Label2" type="Label" parent="ColorRect/vars/labels2"]
+margin_top = 52.0
+margin_right = 99.0
+margin_bottom = 94.0
+hint_tooltip = "The damage you deal to guardians"
+custom_fonts/font = SubResource( 2 )
+text = "Power"
+align = 1
+
+[node name="Label3" type="Label" parent="ColorRect/vars/labels2"]
+margin_top = 104.0
+margin_right = 99.0
+margin_bottom = 146.0
+hint_tooltip = "Number of consecutive attacks"
+custom_fonts/font = SubResource( 2 )
+text = "Stamina"
+align = 1
+
+[node name="Label4" type="Label" parent="ColorRect/vars/labels2"]
+margin_top = 156.0
+margin_right = 99.0
+margin_bottom = 198.0
+hint_tooltip = "How fast you move"
+custom_fonts/font = SubResource( 2 )
+text = "Speed"
+align = 1
+
+[node name="stats" type="VBoxContainer" parent="ColorRect/vars"]
+editor/display_folded = true
+margin_left = 630.0
+margin_top = 146.0
+margin_right = 726.0
+margin_bottom = 344.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="life" type="Label" parent="ColorRect/vars/stats"]
+margin_right = 96.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 2 )
+text = "00000000"
+align = 1
+
+[node name="power" type="Label" parent="ColorRect/vars/stats"]
+margin_top = 52.0
+margin_right = 96.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 2 )
+text = "00000000"
+align = 1
+
+[node name="stamina" type="Label" parent="ColorRect/vars/stats"]
+margin_top = 104.0
+margin_right = 96.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 2 )
+text = "00000000"
+align = 1
+valign = 1
+
+[node name="speed" type="Label" parent="ColorRect/vars/stats"]
+margin_top = 156.0
+margin_right = 96.0
+margin_bottom = 198.0
+custom_fonts/font = SubResource( 2 )
+text = "00000000"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/disable = SubResource( 4 )
+anims/enable = SubResource( 5 )
+
